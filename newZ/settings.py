@@ -32,8 +32,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True    # Use during development not in production
 
-# DEBUG = 'RENDER' not in os.environ
-DEBUG = True
+DEBUG = 'RENDER' not in os.environ
 
 
 ALLOWED_HOSTS = []
@@ -99,12 +98,7 @@ DATABASES = {
         'PASSWORD': env('POSTGRES_PASSWORD'),
         'HOST': env('HOST'),
         'PORT': ''
-    },
-    # 'default': dj_database_url.config(
-    #     # Feel free to alter this value to suit your needs.
-    #     default='postgresql://postgres:postgres@localhost:5432/mysite',
-    #     conn_max_age=600
-    # )
+    }
 }
 
 if RENDER_EXTERNAL_HOSTNAME:
@@ -161,8 +155,8 @@ if not DEBUG:
 
     # Turn on WhiteNoise storage backend that takes care of compressing static files
     # and creating unique names for each version so they can safely be cached forever.
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-    # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    # STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

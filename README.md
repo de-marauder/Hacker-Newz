@@ -6,10 +6,14 @@ A simple Django project which utilizes the Hacker news API and exposes custom AP
 https://ROOTURL
 
 # API Endpoints
+| URLs   |      Supported HTTP verbs      |
+|----------|:-------------:|
+| https://ROOTURL/api/v0/posts | GET |
+| https://ROOTURL/api/v0/post/:id | GET POST PUT DELETE  |
 
-https://ROOTURL/api/v0/posts GET
-https://ROOTURL/api/v0/post/:id GET POST PUT DELETE
+<br>
 
 ## Creator: de-marauder
-(linkedin)[https://linkedin.com/in/obiajulu-ezike]
-(twitter)[https://twitter.com/De_marauder]
+[linkedin](https://linkedin.com/in/obiajulu-ezike)
+<br>
+[twitter](https://twitter.com/De_marauder)

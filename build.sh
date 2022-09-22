@@ -25,4 +25,5 @@ echo '=================='
 
 # Gather static files and migrate database
 python3 manage.py collectstatic --no-input
+python3 manage.py makemigrations
 python3 manage.py migrate

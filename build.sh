@@ -7,6 +7,8 @@ set -o errexit
 
 # Add poetry command to PATH
 # export PATH=${PATH}:${HOME}/.local/bin
+add-apt-repository ppa:deadsnakes/ppa
+apt update
 echo '=================='
 echo ${PATH}
 echo '=================='

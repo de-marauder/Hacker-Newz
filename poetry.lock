@@ -290,7 +290,7 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "eb3a17728cf3304838ca0c99fd5a31bfa23df662ccb4c678d39c29095a04ebe0"
+content-hash = "38e74242c720780d56ced8f525139edc484d18332c0bdef34ee499dcfeb1b20d"
 
 [metadata.files]
 APScheduler = [

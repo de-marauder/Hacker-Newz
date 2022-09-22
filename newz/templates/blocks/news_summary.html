@@ -1,0 +1,51 @@
+<div id="{{news.id}}" class="news_summary" data-news-type="{{news.type}}">
+    <div class="card">
+        <div class="vote_tracker">
+            <div class="upvote">
+                <span><i class="fa-solid fa-chevron-up"></i></span>
+            </div>
+            <div class="counter">
+                {% if news.score %}
+                {{news.score}}
+                {% else %}
+                0
+                {% endif %}
+            </div>
+            <div class="downvote">
+                <span><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+        </div>
+
+        <div class="news_details">
+            <div class="title">
+                <!-- {% if news.url %}
+                    <a href={{news.url}} target="_blank" rel="noopener noreferrer">
+                {% else %}
+                    <a href="{% url 'newz:post' id=news.id %}">
+                        {% endif %} -->
+                <a href="{% url 'newz:post' id=news.id %}">
+                    <h3>{{news.title}}</h3>
+                </a>
+            </div>
+            <div class="metadata">
+                <p>By: <span class="post-author">{{news.by}}</span></p>
+
+                <!-- Time conversions -->
+
+                <p>{{news.time}} ago</p>
+                <!-- End Time conversions -->
+
+                <p>{{news.descendants}} comments</p>
+            </div>
+        </div>
+
+        {% if news.url %}
+        <a class="hyperlink" href={{news.url}} target="_blank" rel="noopener noreferrer">
+            <div>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+        </a>
+        {% endif %}
+
+    </div>
+</div>

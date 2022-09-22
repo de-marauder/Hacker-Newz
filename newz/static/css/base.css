@@ -1,0 +1,47 @@
+html {
+    --primary-hue: 0;
+    --secondary-hue: 115;
+    --accent-hue: 61;
+    
+    --primary-saturation: 0%;
+    --secondary-saturation: 67%;
+    --accent-saturation: 100%;
+    
+    --primary-lightness: 7%;
+    --secondary-lightness: 51%;
+    --accent-lightness: 66%;
+
+    --primary-color: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+    --secondary-color: hsl(var(--secondary-hue), var(--secondary-saturation), var(--secondary-lightness));
+    --accent-color: hsl(var(--accent-hue), var(--accent-saturation), var(--accent-lightness));
+
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 90% ;
+    max-width: 800px ;
+    margin: 0 auto ;
+}
+
+.p-10 {
+    padding-top: 10rem !important;
+}
+.p-11 {
+    padding-top: 11rem !important;
+}
+
+.font-sm {
+    font-size: 1rem !important;
+    font-weight: 300 !important;
+}
+
+.cursor-default {
+    cursor: default !important
+}

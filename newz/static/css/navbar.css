@@ -1,0 +1,36 @@
+.navbar {
+    z-index: 20;
+    top: 0;
+    border-bottom: 1px solid hsl(var(--accent-hue), var(--accent-saturation), var(--accent-lightness));
+    position: fixed;
+    width: 100vw;
+    background-color: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+}
+
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem 0;
+    color: hsla(var(--secondary-hue), var(--secondary-saturation), var(--secondary-lightness));
+}
+a {
+    color: inherit
+}
+
+#github-link a {
+    text-decoration: none;
+    text-shadow: 0 0 3px hsla(var(--accent-hue), var(--accent-saturation), var(--accent-lightness), 0.4);
+    font-weight: 900;
+    font-size: 1rem;
+    color: hsla(var(--accent-hue), var(--accent-saturation), var(--accent-lightness), 0.5);
+}
+#github-link a span {
+    display: inline-block;
+    transition: .2s;
+}
+#github-link a span:hover {
+    scale: 1.1;
+    /* margin: 0 3px; */
+    translate: 0 -5px
+}

@@ -1,0 +1,23 @@
+{% if paged_news.has_other_pages %}
+<nav>
+    <ul class="pagination">
+        {% if paged_news.has_previous %}
+        <li><a href="?page={{ paged_news.previous_page_number }}">&laquo;</a></li>
+        {% else %}
+        <li class="disabled cursor-default"><span>&laquo;</span></li>
+        {% endif %}
+        {% for i in paged_news.paginator.page_range %}
+        {% if paged_news.number == i %}
+        <li class="active  cursor-default"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+        {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+        {% endif %}
+        {% endfor %}
+        {% if paged_news.has_next %}
+        <li><a href="?page={{ paged_news.next_page_number }}">&raquo;</a></li>
+        {% else %}
+        <li class="disabled cursor-default"><span>&raquo;</span></li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}

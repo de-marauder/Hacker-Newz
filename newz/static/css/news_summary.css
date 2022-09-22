@@ -1,0 +1,85 @@
+#hacker-news .news_summary {
+    margin: 1rem 0;
+}
+
+#hacker-news .card {
+    display: flex;
+    align-items: center;
+    padding: .5rem 2rem;
+    background: hsla(var(--accent-hue), var(--accent-saturation), var(--accent-lightness), 0.2);
+    margin: .3rem;
+    border-radius: 5px;
+    transition: .2s;
+}
+#hacker-news .card-2 {
+    background: inherit;
+    border: 1px solid hsla(var(--secondary-hue), var(--secondary-saturation), var(--secondary-lightness), 0.2);
+}
+
+#hacker-news .card:hover {
+    box-shadow: 0 0 1rem hsla(var(--accent-hue), var(--accent-saturation), var(--accent-lightness), 0.2);
+}
+#hacker-news .vote_tracker {
+    text-align: center;
+}
+#hacker-news .vote_tracker .upvote {
+    margin-bottom: 5px;
+    color: hsla(var(--secondary-hue), var(--secondary-saturation), var(--secondary-lightness), 0.5);
+}
+
+#hacker-news .vote_tracker .downvote {
+    margin-top: 5px;
+    color: hsla(var(--secondary-hue), var(--secondary-saturation), var(--secondary-lightness), 0.5);
+}
+
+#hacker-news .vote_tracker .upvote:hover {
+    color: hsla(var(--secondary-hue), var(--secondary-saturation), var(--secondary-lightness), 1);
+}
+
+#hacker-news .vote_tracker .downvote:hover {
+    color: hsla(var(--secondary-hue), var(--secondary-saturation), var(--secondary-lightness), 1);
+}
+
+#hacker-news .news_details {
+    flex-grow: 1;
+    margin-left: 2rem;
+    text-align: left;
+}
+
+#hacker-news .title {
+    text-align: left;
+    cursor: pointer;
+    width: fit-content;
+}
+
+#hacker-news .title:hover a {
+    text-decoration: underline;
+}
+
+#hacker-news .metadata {
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    color: hsla(var(--accent-hue), var(--accent-saturation), var(--accent-lightness), 0.3);
+}
+
+#hacker-news .metadata>p:not(:first-child):hover, .metadata span:hover {
+    color: hsla(var(--accent-hue), var(--accent-saturation), var(--accent-lightness), 0.5);
+    cursor: pointer;
+}
+
+#hacker-news .hyperlink {
+    margin-left: 1rem;
+}
+#hacker-news .hyperlink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    aspect-ratio: 1 / 1;
+    width: 30px;
+    border-radius: 50%;
+    background-color: hsla(var(--primary-hue), var(--primary-saturation), var(--primary-lightness), 0.5);
+}

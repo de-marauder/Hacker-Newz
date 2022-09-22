@@ -1,0 +1,40 @@
+.post_wrapper {
+    margin-bottom: 3rem;
+}
+.post {
+    background-color: hsla(var(--accent-hue), var(--accent-saturation), var(--accent-lightness), .2);
+    border-radius: 5px;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    aspect-ratio: 1 / 1;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid hsl(var(--accent-hue), var(--accent-saturation), var(--accent-lightness));
+}
+.avatar img {
+    width: 100%;
+}
+
+.post_title {
+    flex-grow: 1;
+    margin-left: 2rem;
+}
+
+.post .metadata {
+    color: hsla(var(--accent-hue), var(--accent-saturation), var(--accent-lightness), .5)
+}
+
+.post_body {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    word-break: break-word;
+}

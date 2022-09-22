@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<link rel="stylesheet" href="{% static 'css/filter_bar.css' %}?version=5">
+<link rel="stylesheet" href="{% static 'css/news_summary.css' %}?version=6">
+{% endblock %}
+{% block content %}
+<center>
+    {% include 'blocks/filter_bar.html' %}
+
+    <div class="p-11">
+
+        <div class="container" id="news_cards">
+            {% for news in latest_news %}
+            {% include 'blocks/news_summary.html' %}
+            {% endfor %}
+        </div>
+        <hr>
+        {% include 'blocks/paginator.html' %}
+    </div>
+</center>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/filter.js' %}?version=1"></script>
+{% endblock %}

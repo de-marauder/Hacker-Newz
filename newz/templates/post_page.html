@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<link rel="stylesheet" href="{% static 'css/news_summary.css' %}?version=4">
+<link rel="stylesheet" href="{% static 'css/post.css' %}?version=3">
+{% endblock %}
+{% block content %}
+<div class="post_wrapper container p-10">
+    <div class="post">
+        <div class="header">
+            <div class="avatar">
+                <img src="https://robohash.org/{{post.id}}" alt="avatar">
+            </div>
+            <div class="post_title">
+                <h1>{{post.title}}</h1>
+            </div>
+        </div>
+        <div class="metadata">
+            <p>By: <span>{{post.by}}</span></p>
+
+            <!-- Time conversions -->
+            
+            <p>{{post.time}} ago</p>
+            <!-- End Time conversions -->
+
+            <p>Type: {{post.type}}</p>
+        </div>
+        <hr>
+
+        {% include 'blocks/full news.html' %}
+
+        <hr>
+    </div>
+
+    <div class="comments">
+        <h2>Comments</h2>
+        {% for comment in comments %}
+        {% include 'blocks/comments.html' %}
+        {% endfor %}
+
+        {% include 'blocks/paginator.html' %}
+    </div>
+</div>
+{% endblock %}

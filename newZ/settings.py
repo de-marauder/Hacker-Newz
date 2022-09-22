@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'newZ.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'newz',
+        'NAME': env('POSTGRES_DBNAME'),
         'USER': env('POSTGRES_USER'),
         'PASSWORD': env('POSTGRES_PASSWORD'),
         'HOST': env('HOST'),
@@ -107,6 +107,7 @@ DATABASES = {
 }
 
 if RENDER_EXTERNAL_HOSTNAME:
+    DATABASES['default']['DBNAME'] = os.environ.get('POSTGRES_DBNAME')
     DATABASES['default']['USER'] = os.environ.get('POSTGRES_USER')
     DATABASES['default']['PASSWORD'] = os.environ.get('POSTGRES_PASSWORD')
     DATABASES['default']['HOST'] = os.environ.get('HOST')

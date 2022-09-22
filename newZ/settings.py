@@ -91,25 +91,25 @@ WSGI_APPLICATION = 'newZ.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'newz',
-        'USER': env('POSTGRES_USER'),
-        'PASSWORD': env('POSTGRES_PASSWORD'),
-        'HOST': env('HOST'),
-        'PORT': ''
-    },
-    # 'default': dj_database_url.config(
-    #     # Feel free to alter this value to suit your needs.
-    #     default='postgresql://postgres:postgres@localhost:5432/mysite',
-    #     conn_max_age=600
-    # )
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'newz',
+    #     'USER': env('POSTGRES_USER'),
+    #     'PASSWORD': env('POSTGRES_PASSWORD'),
+    #     'HOST': env('HOST'),
+    #     'PORT': ''
+    # },
+    'default': dj_database_url.config(
+        # Feel free to alter this value to suit your needs.
+        default='postgresql://postgres:postgres@localhost:5432/mysite',
+        conn_max_age=600
+    )
 }
 
 if RENDER_EXTERNAL_HOSTNAME:
     DATABASES['default']['USER'] = os.environ.get('POSTGRES_USER')
-    DATABASES['default']['PASSWORD'] = os.environ.get('POSTGRES_PASSWORD'),
-    DATABASES['default']['HOST'] = os.environ.get('HOST'),
+    DATABASES['default']['PASSWORD'] = os.environ.get('POSTGRES_PASSWORD')
+    DATABASES['default']['HOST'] = os.environ.get('HOST')
 
 
 

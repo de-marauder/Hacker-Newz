@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # exit on error
 set -o errexit
-sudo apt-get update
-sudo apt-get -y install python3-pip
+curl -sSL https://bootstrap.pypa.io/get-pip.py | python3
 pip3 --version
 
 pip3 install -r requirements.txt

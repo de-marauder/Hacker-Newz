@@ -5,6 +5,9 @@ A simple Django project which utilizes the Hacker news API and exposes custom AP
 # Live Site
 https://hackernews-lus1.onrender.com/
 
+# Repo
+https://github.com/de-marauder/Hacker-Newz
+
 # API Endpoints
 | URLs   |      Supported HTTP verbs      |
 |----------|:-------------:|

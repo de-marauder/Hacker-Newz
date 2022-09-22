@@ -10,6 +10,8 @@ set -o errexit
 echo '=================='
 echo ${PATH}
 echo '=================='
+python3 --version
+echo '=================='
 poetry --version
 echo '=================='
 # poetry shell

@@ -12,7 +12,7 @@ echo ${PATH}
 echo '=================='
 poetry --version
 echo '=================='
-poetry shell
+# poetry shell
 echo '=================='
 poetry install
 echo '=================='

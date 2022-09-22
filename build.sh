@@ -2,11 +2,15 @@
 # exit on error
 uname -a
 set -o errexit
-curl -sSL https://bootstrap.pypa.io/get-pip.py | python3
-pip3 --version
-python3 --version
+# Install poetry
+curl -sSL https://install.python-poetry.org | python3 -
 
-pip3 install -r requirements.txt
+# Add poetry command to PATH
+export PATH=${PATH}:${HOME}/.local/bin
 
+poetry --version
+poetry install
+
+# Gather static files and migrate database
 python3 manage.py collectstatic --no-input
 python3 manage.py migrate

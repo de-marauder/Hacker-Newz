@@ -3,10 +3,10 @@
 uname -a
 set -o errexit
 # Install poetry
-curl -sSL https://install.python-poetry.org | python3 -
+# python3 ./poetry.py
 
 # Add poetry command to PATH
-export PATH=${PATH}:${HOME}/.local/bin
+# export PATH=${PATH}:${HOME}/.local/bin
 echo '=================='
 echo ${PATH}
 echo '=================='
